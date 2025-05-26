@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt""
+	"fmt"
+
+	c "github.com/samueeloliveira/banco/contas"
 )
 
 func main() {
-	contaDaSilvia := contas.ContaCorrente{Titular: "Silvia", Saldo: 300}
-	contaDoGustavo := contas.ContaCorrente{Titular: "Gustavo", Saldo: 100}
+	contaDaSilvia := c.ContaCorrente{Titular: "Silvia", Saldo: 300}
+	contaDoGustavo := c.ContaCorrente{Titular: "Gustavo", Saldo: 100}
 
 	status := contaDaSilvia.Transferir(200.0, &contaDoGustavo)
 
